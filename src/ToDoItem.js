@@ -10,11 +10,7 @@ export default class TodoItem extends React.Component{
            this.props.refcomplete(id);
         }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        if (nextProps.title === this.props.title) return false;
-
-        return true;
-      }
+    
     render() {
       const isCompleted = this.props.isCompleted;
       return (

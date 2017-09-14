@@ -26,7 +26,12 @@ export default class ToDoApp extends React.Component{
 
     completeTodo(id){
 
-        }
+        let updatedTodos = this.state.todos.map(function(todo) {
+                               if(todo.title === id ) todo.iscompleted=true;
+                               return todo;
+                           })
+        this.setState({todos : updatedTodos});
+    }
 
     render(){
         return (<div><h1>To Do</h1>
